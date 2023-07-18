@@ -87,6 +87,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 	margin: 0px; 
 	padding: 0px; 
 	box-sizing: border-box;
+  transition: ease all 0.5s;
 }
 
 body, html {
@@ -1056,14 +1057,14 @@ li.sale-noti > a {
 .side-menu .main-menu {margin-bottom: 0;}
 
 .item-menu-mobile {
-  background-color: #e65540;
+  background-color: #ffffff;
 }
 
 .side-menu .main-menu > li > a {
   padding-left: 20px;
   font-family: Montserrat-Regular;
   font-size: 15px;
-  color: white;
+  color: rgb(0, 0, 0);
   line-height: 2.86;
 }
 
@@ -1107,13 +1108,12 @@ li.sale-noti > a {
 
 .side-menu .sub-menu > li {
   padding-left: 12px;
-  padding-top: 
 }
 
 .side-menu .sub-menu a:hover {
   text-decoration: none;
   padding-left: 20px;
-  color: #e65540 !important;
+  color: #fafafa !important;
 }
 
 .side-menu .sub-menu {
