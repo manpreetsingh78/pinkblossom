@@ -1043,6 +1043,9 @@ li.sale-noti > a {
   background-color: white;
   display: none;
   border-top: 1px solid #ececec;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .side-menu {
@@ -1056,20 +1059,27 @@ li.sale-noti > a {
 .side-menu .main-menu {margin-bottom: 0;}
 
 .item-menu-mobile {
-  background-color: #e65540;
+  background-color: #ffffff;
 }
-
 .side-menu .main-menu > li > a {
-  padding-left: 20px;
   font-family: Montserrat-Regular;
   font-size: 15px;
-  color: white;
+  color: rgb(0, 0, 0);
   line-height: 2.86;
+  text-decoration: none;
 }
+.side-menu .main-menu > li > a:hover {
+  color: red;
+}
+
 
 .side-menu .main-menu > li {
   color: white;
   position: relative;
+}
+.side-menu .main-menu > li  :hover {
+  background-color: rgb(207, 8, 8);
+ 
 }
 
 
@@ -1362,7 +1372,6 @@ li.sale-noti > a {
   height: 570px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .arrow-slick1 {

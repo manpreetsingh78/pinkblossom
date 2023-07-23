@@ -39,6 +39,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*[ FONT ]
 ///////////////////////////////////////////////////////////
 */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;800;900&display=swap');
+
 
 @font-face {
   font-family: Montserrat-Regular;
@@ -108,6 +110,7 @@ a {
 	-webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
+  text-decoration: none !important;
 }
 
 a:focus {
@@ -135,6 +138,7 @@ p {
 ul, li {
 	margin: 0px;
 	list-style-type: none;
+
 }
 
 
@@ -631,6 +635,7 @@ iframe {
   position: absolute;
   left: 52px;
   top: 50%;
+  overflow: hidden;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -639,7 +644,7 @@ iframe {
 }
 
 .logo img {
-  max-height: 27px;
+  max-height: 200px;
 }
 
 
@@ -669,10 +674,11 @@ iframe {
 
 .main_menu > li > a {
   font-family: Montserrat-Regular;
-  font-size: 15px;
+  font-size: 18px;
   color: #333333;
   padding: 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
 }
 
 li.sale-noti > a {
@@ -681,7 +687,7 @@ li.sale-noti > a {
 
 .main_menu > li:hover > a {
   text-decoration: none;
-  border-bottom: 1px solid #333333;
+  border-bottom: 2px solid#FF7CDA;
 }
 
 .main_menu li {
@@ -700,7 +706,7 @@ li.sale-noti > a {
   top:0;
   left:100%;
   width: 225px;
-  background-color: #222222;
+  background-color: #ffffff;
   opacity: 0;
   visibility: hidden;
   padding-top: 10px;
@@ -733,7 +739,7 @@ li.sale-noti > a {
   padding: 10px;
   font-family: Montserrat-Regular;
   font-size: 13px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .sub_menu > li:hover > a {
@@ -972,7 +978,7 @@ li.sale-noti > a {
   padding-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: white;
+  background-color: #FFFBFF;
   display: none;
 }
 
@@ -983,7 +989,7 @@ li.sale-noti > a {
 }
 
 .logo-mobile img {
-  max-height: 27px;
+  max-height: 100px;
 }
 
 /*[ btn show menu ]
@@ -1044,6 +1050,9 @@ li.sale-noti > a {
   background-color: white;
   display: none;
   border-top: 1px solid #ececec;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .side-menu {
@@ -1061,11 +1070,15 @@ li.sale-noti > a {
 }
 
 .side-menu .main-menu > li > a {
-  padding-left: 20px;
   font-family: Montserrat-Regular;
   font-size: 15px;
+  font-weight: 500;
   color: rgb(0, 0, 0);
   line-height: 2.86;
+  text-decoration: none;
+}
+.side-menu .main-menu > li > a:hover {
+  color: red;
 }
 
 .side-menu .main-menu > li {
@@ -1360,9 +1373,8 @@ li.sale-noti > a {
 
 .item-slick1 {
   height: 570px;
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
-  background-position: center center;
 }
 
 .arrow-slick1 {

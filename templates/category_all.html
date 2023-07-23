@@ -3,201 +3,147 @@
 {% load category_template_tags %}
 {% block content %}
 <style type="text/css">
-	.categories{
-	background-color: #ffffff;
-	width: 100%;
-}
+	 h1 {
+            color: rgb(6, 6, 6);
+        }
+         
+        * {
+            box-sizing: border-box;
+        }
+         
+        body {
+            text-align: center;
+        }
+               
+        /* Float three columns */
+        .column {
+            float: left;
+            width: 10%;
+			padding: 0 5px;
+            
+        }
+         
+        .row {
+            margin: 15px 15px 15px 5px;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			
 
-.categories .wrapper{
-	width: 80%;
-	margin:auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap:25px;
-	flex-direction:column;
-	padding:50px 0
-}
-.categories .wrapper .categories-container{
-	display:flex;
-	gap:35px;
-	flex-wrap:wrap;;
-	justify-content:center;
-	align-items:center;
-}
-
-
-.categories .wrapper .categories-container .category{
-	width:150px;
-	height:150px;
-	position:relative;
-	overflow:hidden;
-	border-radius:100%;
-    transition:.5s ease-out
-}
-
-.categories .wrapper .categories-container .category:hover{
-	cursor:pointer;
-}
-
-.categories .wrapper .categories-container .category:hover img{
-	transform:scale(1.2);
-	transition:.5s ease-in;
-}
-
-.categories .wrapper .categories-container .category::before{
-	content:'';
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	background-color:#33333357;
-	position:absolute;
-	z-index:1;
-}
+        }
+               
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+        }
+               
+               
+        /* Style the cards */
+        .card {
+			display: flex;
+			justify-content: center;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            color: rgb(248, 248, 248);
+			border-color:rgb(255, 255, 255);
+			border-radius: 15px;
 
 
-.categories .wrapper .categories-container .category img{
-	height:100%;
-	width:100%;
-	object-fit:cover;
-	position:relative;
-}
+        }
+		.category-icon{
+			color: #FF7CDA;
+			background-color: #ffe9e9;
+			margin: 31px 35px 3px 35px;
+			padding: 13px;
+			border-radius: 50%;
+			
+		}
+		.category-name{
+			color:  #444444;
+			font-size: 18px;
+			font-weight: 600;
+		}         
+        .card:hover{
+            background-color:#ffe9e9;
+            transition-duration: 1s; 
+        }
 
-.categories .wrapper .categories-container .category .category-body{
-	position:absolute;
-	text-align:center;
-	color:#fff;
-	z-index:2;
-	height:100%;
-	width:100%;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	flex-direction:column;
-}
-
-.categories .wrapper .categories-container .category .category-body h4{
-	font-size:18px;
-}
-
-.categories .wrapper .categories-container .category .category-body span{
-	font-size:.8rem
-}
-
-
-.btn-show-all{
-	display:block;
-	padding:10px 20px;
-	border-radius:8px;
-	background-color:#E91E63;
-	color:#fff;
-	text-transform:uppercase;
-	outline:none;
-	border:0;
-	transition:.25s ease;
-	margin-top:30px;
-}
-
-.btn-show-all:hover{
-	outline:none;
-	border:0;
-	background-color:#980f3d;
-}
-
-
-.category-sub-title{
-	text-transform:uppercase;
-	color:var(--intech-theme-indigo);
-	font-weight:700;
-	font-size:.8rem;
-}
-.category-title{
-	text-transform:uppercase;
-	font-size:2rem;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #000000;
+		/* .category-icon:hover{
+			color:#FF7CDA;
+		}
+		.category-name:hover{
+			color:#FF7CDA;
+		}
+          */
+        .fa {
+			position: relative;
+            font-size: 50px;
+			
+        }
+		@media screen and (max-width: 800px) {
+  .column {
+    width: 40%;
+	margin: 10px; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .category-icon{
+	margin: 18px 19px 0px 13px;
+  }
 }
 
 </style>
 
 	<!-- Title Page -->
-	<section class="bg-title-page">
-		
-		<div class="categories">
-			<div class="wrapper">
-				<h3 class="category-title">our categories</h3>
-				<h6 class="category-sub-title">Lorem ipsum dolor sit amet.</h6>
-
-				<div class="categories-container">
-
-					<div class="category">
-
-						<img src="{% static 'images/categories/cat1.jpg' %}" alt="">
-						<div class="category-body">
-							<h4>Suit set</h4>
-							<span>100+ product</span>
-						</div>
-					</div>
-
-					<div class="category">
-
-						<img src="{% static 'images/categories/cat2.jpg' %}" alt="">
-						<div class="category-body">
-							<h4>toys</h4>
-							<span>100 courses</span>
-						</div>
-					</div>
-
-					<div class="category">
-
-						<img src="{% static 'images/categories/cat3.jpg'%}" alt="">
-						<div class="category-body">
-							<h4>Lorem, ipsum</h4>
-							<span>100 courses</span>
-						</div>
-					</div>
-
-					<div class="category">
-
-						<img src="{% static 'images/categories/cat4.jpg'%}" alt="">
-						<div class="category-body">
-							<h4>Lorem, ipsum</h4>
-							<span>100 courses</span>
-						</div><h4>Lorem, ipsum</h4>
-						<span>100 courses</span>
-					</div>
-
-					<div class="category">
-
-						<img src="{% static 'images/categories/cat5.jpg'%}" alt="">
-						<div class="category-body">
-							<h4>Lorem, ipsum</h4>
-							<span>100 courses</span>
-						</div>
-					</div>
-
-					<div class="category">
-
-						<img src="{% static 'images/categories/cat6.jpg'%}" alt="">
-						<div class="category-body">
-							<h4>Lorem, ipsum</h4>
-							<span>100 courses</span>
-						</div>
-					</div>
-
-				</div>
-
-				<button class="btn-show-all" type="button">show all categorise</button>
-			</div>
-		</div>
+	<section>
+		<h1>Categories</h1>
+    <br>
+   
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <p  class="category-icon">
+                    <i class="fa fa-user"></i>
+                </p>
+                <p class="category-name">Contributor</p>
+            </div>
+        </div>
+		<div class="column">
+            <div class="card">
+                <p class="category-icon">
+                    <i class="fa fa-user"></i>
+                </p>
+                <p class="category-name">Contributor</p>
+            </div>
+        </div>
+		<div class="column">
+            <div class="card">
+                <p class="category-icon">
+                    <i class="fa fa-user"></i>
+                </p>
+                <p class="category-name">Contributor</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <p class="category-icon">
+                  <i class="fa fa-book"></i>
+                  </p>
+            
+                <p class="category-name">Article</p>
+            </div>
+        </div>
+       
+        <div class="column">
+            <div class="card">
+                <p class="category-icon">
+                  <i class="fa fa-smile-o">
+                  </i>
+                  </p>
+               
+                <p class="category-name">Employees</p>
+            </div>
+        </div>
+    </div>
 	</section>
 	<!-- main content -->
 	<section>

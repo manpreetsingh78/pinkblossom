@@ -4,11 +4,29 @@
 
 <style>
 	.topbar {
-		background-color: white;
+		background-color: #FFFBFF;
 		color: black !important;
+	}
+	.topbar a {
+		text-decoration: none;
 	}
 	.topbar a:hover{
 		color: black;
+	}
+	.icon1 a:hover{
+		color: #1877f2;
+	}
+	.icon2 a:hover{
+		color:#c32aa3;
+	}
+	.icon3 a:hover{
+		color:#25d366;
+	}
+	.icon4 a:hover{
+		color:  #1da1f2;
+	}
+	.icon5 a:hover{
+		color: #ff0000;
 	}
 </style>
 <!-- Header -->
@@ -17,11 +35,11 @@
 		<div class="container-menu-header">
 			<div class="topbar">
 				<div class="topbar-social">
-					<a href="#" class="topbar-social-item fab fa-facebook"></a>
-					<a href="https://www.instagram.com/pink_fashion_boutique1/" target="_blank" rel="noreferrer noopener" class="topbar-social-item fab fa-instagram"></a>
-					<a href="https://api.whatsapp.com/send/?phone=919728213131&text&type=phone_number&app_absent=0"  target="_blank" rel="noreferrer noopener" class="topbar-social-item fab fa-whatsapp"></a>
-					<a href="#" class="topbar-social-item fab fa-twitter"></a>
-					<a href="#" class="topbar-social-item fab fa-youtube"></a>
+					<span class="icon1"><a href="#" class="topbar-social-item fab fa-facebook"></a></span>
+					<span class="icon2"><a href="https://www.instagram.com/pink_fashion_boutique1/" target="_blank" rel="noreferrer noopener" class="topbar-social-item fab fa-instagram"></a></span>
+					<span class="icon3"><a href="https://api.whatsapp.com/send/?phone=919728213131&text&type=phone_number&app_absent=0"  target="_blank" rel="noreferrer noopener" class="topbar-social-item fab fa-whatsapp"></a></span>
+					<span class="icon4"><a href="#" class="topbar-social-item fab fa-twitter"></a></span>
+					<span class="icon5"><a href="#" class="topbar-social-item fab fa-youtube"></a></span>
 				</div>
 
 				<span class="topbar-child1">
@@ -42,7 +60,8 @@
 			<div class="wrap_header">
 				<!-- Logo -->
 				<a href="/" class="logo">
-					<p style="color: #FF7CDA;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 32px; ">Pink Blossom</p>
+					<img src="{% static 'images/logo.png'%}" alt="IMG-PRODUCT" 
+					width="200px">
 				</a>
 
 				<!-- Menu -->
@@ -173,9 +192,9 @@
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
 			<a href="index.html" class="logo-mobile">
-				<p style="color: #FF7CDA;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 28px; ">Pink Blossom</p>
+				<img src="{% static 'images/logo.png'%}" alt="IMG-PRODUCT" 
+					width="150px">
 			</a>
-
 			<!-- Button show menu -->
 			<div class="btn-show-menu">
 				<!-- Header Icon mobile -->
@@ -276,7 +295,7 @@
 		<!-- Menu Mobile -->
 		<div class="wrap-side-menu" >
 			<nav class="side-menu">
-				<ul class="main-menu">
+				<ul class="main-menu" style="padding-left: 0em;">
 					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 						<span class="topbar-child1">
 							Free shipping for standard order over Rs. 1000
@@ -297,27 +316,27 @@
 					</li>
 
 					<li class="item-topbar-mobile p-l-10">
-						<div class="topbar-social-mobile">
-							<a href="#" class="topbar-social-item fa fa-facebook"></a>
-							<a href="#" class="topbar-social-item fa fa-instagram"></a>
-							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+						<div class="topbar-social-mobile" style="text-decoration: none;">
+							<span class="icon1"><a href="#" style="font-size: 20px;" class="topbar-social-item fa fa-facebook"></a></span>
+							<span class="icon2"><a href="#" style="font-size: 20px;" class="topbar-social-item fa fa-instagram"></a></span>
+							<span class="icon3"><a href="#"  style="font-size: 20px;"class="topbar-social-item fa fa-whatsapp"></a></span>
+							<span class="icon4"><a href="#" style="font-size: 20px;" class="topbar-social-item fa fa-twitter"></a></span>
+							<span class="icon5"><a href="#" style="font-size: 20px;" class="topbar-social-item fa fa-youtube-play"></a></span>
 						</div>
 					</li>
 
-					<li class="item-menu-mobile">
+					<li class="item-menu-mobile" style="text-decoration: none;">
 						<a href="/">Home</a>
 					</li>
 
-					<li class="item-menu-mobile">
+					<li class="item-menu-mobile"  style="text-decoration: none;">
 						<a href="/shop">Shop</a>
 					</li>
 
 					{% categories_mobile %}
 
 					{% if request.user.is_authenticated %}
-					<li class="item-menu-mobile">
+					<li class="item-menu-mobile"  style="text-decoration: none;">
 						<a href="{% url 'core:order-summary' %}">Cart<span class="badge badge-dark">{{ request.user|cart_item_count }}</span></a>
 					</li>
 					<li class="item-menu-mobile">
@@ -325,7 +344,7 @@
 					</li>
 					{% else %}
 					<li class="item-menu-mobile">
-						<a href="#">Login</a>
+						<a href="#" style="text-decoration: none;">Login</a>
 						<ul class="sub-menu">
 							<li><a href="{% url 'account_login' %}">Login</a></li>
 							<li><a href="{% url 'account_signup' %}">SignUp</a></li>
