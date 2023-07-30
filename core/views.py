@@ -149,6 +149,7 @@ class CategoryView(View):
             'category_image': category.image
         }
         return render(self.request, "category.html", context)
+
 class CategoryAll(View):
     def get(self, *args, **kwargs):
         category = Category.objects.filter(is_active=True).all()

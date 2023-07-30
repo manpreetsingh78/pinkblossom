@@ -13,3 +13,4 @@ media
 /.vscode
 /.idea
 venv
+db.sqlite3
