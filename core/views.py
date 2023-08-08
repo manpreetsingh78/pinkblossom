@@ -158,6 +158,9 @@ class CategoryAll(View):
         }
         print(category)
         return render(self.request, "category_all.html", context)
+class TncAll(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "tnc.html", {})
 
 
 class CheckoutView(View):
