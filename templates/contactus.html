@@ -1,0 +1,96 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+   <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+    </style>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .contact-section {
+        background-color: #f4f4f4;
+        padding: 50px 0;
+        text-align: center;
+      }
+      .contact-heading {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .contact-info {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .contact-info p {
+        margin-bottom: 10px;
+      }
+      .contact-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .contact-button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  
+ 
+    <div class="container">
+  <div class="py-5 text-center">
+    <section class="contact-section">
+      <div class="contact-info">
+        <h2 class="contact-heading">Contact Us</h2>
+        <p>If you have any questions, suggestions, or feedback, please feel free to reach out to us.</p>
+        <p>Email: <a href="mailto:admin@pinkblossom.in">admin@pinkblossom.in</a><br><a href="mailto:kemporiumm@gmail.com">kemporiumm@gmail.com</a></p>
+        <p>Phone: +91-805-3013131</p>
+        <p>Address: 13 Point Trading Company<br>Dabra chowk
+          , Hisar <br>
+          Haryana, 125001</p>
+        {% comment %} <a href="#" class="contact-button">Send Us a Message</a> {% endcomment %}
+      </div>
+    </section>
+    
+  </div>
+</div>
+{% endblock content %}

@@ -161,6 +161,15 @@ class CategoryAll(View):
 class TncAll(View):
     def get(self, *args, **kwargs):
         return render(self.request, "tnc.html", {})
+class PrivacyPolicy(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "privacy.html", {})
+class ContactUs(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "contactus.html", {})
+class AboutUs(View):
+    def get(self, *args, **kwargs):
+        return render(self.request, "aboutus.html", {})
 
 
 class CheckoutView(View):

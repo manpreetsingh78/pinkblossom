@@ -13,7 +13,10 @@ from .views import (
     RequestRefundView,
     CategoryView,
     CategoryAll,
-    TncAll
+    TncAll,
+    PrivacyPolicy,
+    ContactUs,
+    AboutUs
 )
 from django.conf.urls.static import static
 from django.conf import settings
@@ -26,6 +29,9 @@ urlpatterns = [
     path('checkout/', CheckoutView.as_view(), name='checkout'),
     path('categories/', CategoryAll.as_view(), name='categories'),
     path('tnc/', TncAll.as_view(), name='terms'),
+    path('contactus/', ContactUs.as_view(), name='contactus'),
+    path('aboutus/', AboutUs.as_view(), name='aboutus'),
+    path('privacy/', PrivacyPolicy.as_view(), name='privacy'),
     path('category/<slug>/', CategoryView.as_view(), name='category'),
     path('product/<slug>/', ItemDetailView.as_view(), name='product'),
     path('add-to-cart/<slug>/', add_to_cart, name='add-to-cart'),
