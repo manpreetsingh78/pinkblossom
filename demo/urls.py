@@ -9,7 +9,7 @@ urlpatterns = [
     path('', include('core.urls', namespace='core'))
 ]
 
-if settings.DEBUG:
+if True:
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL,
