@@ -84,20 +84,22 @@ button {
           </div>
         </div>
         <div class="col-sm-3">
-            <h6 class="mt-3"><a href="https://pinkblossom.in/contactus/">GET HELP</a></h6>
-            <a href="">Order Status</a>
-            <a href="">Shipping and Delivery</a>
-            <a href="https://pinkblossom.in/tnc/">T&C</a>
-            <a href="https://pinkblossom.in/privacy/">Privacy Policy</a>
-            <a href="">Payment Options</a>
-            <a href="https://pinkblossom.in/contactus/">Contact Us</a>
+            <h6 class="mt-3"><a href="#">GET HELP</a></h6>
+            {% comment %} <a href="">Order Status</a> {% endcomment %}
+            <a href="{% url 'core:aboutus' %}">About Us</a>
+            <a href="{% url 'core:terms' %}">T&C</a>
+            <a href="{% url 'core:privacy' %}">Privacy Policy</a>
+            <a href="{% url 'core:refundexchange' %}">Returns & Refunds</a>
+            
         </div>
         <div class="col-sm-3">
-            <h6 class="mt-3"><a href="https://pinkblossom.in/aboutus/">ABOUT Us</a></h6>
-            <a href="">News</a>
-            <a href="">Careers</a>
+            <h6 class="mt-3"><a href="#">Quick Links</a></h6>
+            <a href="{% url 'core:contactus' %}">Contact Us</a>
+            <a href="">Track Order</a>
+            <a href="">Raise a Complaint</a>
+            {% comment %} <a href="">Careers</a>
             <a href="">Investors</a>
-            <a href="">Sustainability</a>
+            <a href="">Sustainability</a> {% endcomment %}
             
             
 
@@ -105,13 +107,13 @@ button {
 
         </div>
         <div class="col-sm-3">
-          <a href="">Voice of Customer</a>
+          {% comment %} <a href="">Voice of Customer</a>
           <a href="">Contacts by Branch</a>
           <a href="">Ethics Reporting</a>
-          <a href="">Careers</a>
+          <a href="">Careers</a> {% endcomment %}
 
-          <br><br>
-          <a href="">Business Inquiry</a>
+          {% comment %} <br><br> {% endcomment %}
+          <a href="{% url 'core:contactus' %}">Business Inquiry</a>
           <br>
           <a  class="apple"  href="" class="ico"><i class="fab fa-apple fa-2x"></i> Apple Store</a>
           <a class="google" href="" class="ico"><i class="fab fa-google-play fa-2x"></i> Google Play</a>
@@ -126,7 +128,7 @@ button {
           
         </div>
         <hr>
-        <a href="/" style="margin-left: 1rem">Privacy Policy | @pinkblossom 2019-2020</a>
+        <a href="/" style="margin-left: 1rem">Copyright | @pinkblossom 2023</a>
       </div>
     </div>
   </footer>

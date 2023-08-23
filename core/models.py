@@ -61,7 +61,10 @@ class Item(models.Model):
     stock_no = models.CharField(max_length=10)
     description_short = models.CharField(max_length=50)
     description_long = models.TextField()
-    image = models.ImageField()
+    image_1 = models.ImageField()
+    image_2 = models.ImageField(blank=True, null=True)
+    image_3 = models.ImageField(blank=True, null=True)
+    image_4 = models.ImageField(blank=True, null=True)
     is_active = models.BooleanField(default=True)
 
     def __str__(self):

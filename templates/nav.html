@@ -34,13 +34,13 @@
 		<!-- Header desktop -->
 		<div class="container-menu-header">
 			<div class="topbar">
-				<div class="topbar-social">
+				{% comment %} <div class="topbar-social">
 					<span class="icon1"><a href="#" class="topbar-social-item fab fa-facebook"></a></span>
 					<span class="icon2"><a href="https://www.instagram.com/pink_fashion_boutique1/" target="_blank" rel="noreferrer noopener" class="topbar-social-item fab fa-instagram"></a></span>
 					<span class="icon3"><a href="https://api.whatsapp.com/send/?phone=919728213131&text&type=phone_number&app_absent=0"  target="_blank" rel="noreferrer noopener" class="topbar-social-item fab fa-whatsapp"></a></span>
 					<span class="icon4"><a href="#" class="topbar-social-item fab fa-twitter"></a></span>
 					<span class="icon5"><a href="#" class="topbar-social-item fab fa-youtube"></a></span>
-				</div>
+				</div> {% endcomment %}
 
 				<span class="topbar-child1">
 					Free shipping for standard order over Rs. 1000
@@ -73,11 +73,11 @@
 
 							</li>
 
-							<li>
+							{% comment %} <li>
 								<a href="/shop/">Shop</a>
-							</li>
+							</li> {% endcomment %}
 							<li>
-								<a href="/categories/">Categories</a>
+								<a href="{% url 'core:categories' %}">Categories</a>
 							</li>
 
 							{% categories %}
@@ -112,18 +112,18 @@
 
 					<div class="header-wrapicon2">
 						<img src="{% static 'images/icons/icon-header-02.png' %}" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">0</span>
+						<span class="header-icons-noti">{{ request.user|cart_item_count }}</span>
 
 						<!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<div class="header-cart-buttons">
 									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="{% url 'core:order-summary' %}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										View Cart
 									</a>
 
 									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="{% url 'core:checkout' %}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Check Out
 									</a>
 							</div>
@@ -152,7 +152,7 @@
 
 					<div class="header-wrapicon2">
 						<img src="{% static 'images/icons/icon-header-02.png' %}" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">0</span>
+						<span class="header-icons-noti">{{ request.user|cart_item_count }}</span>
 
 						<!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
@@ -162,14 +162,14 @@
 							<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="{% url 'core:order-summary' %}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										View Cart
 									</a>
 								</div>
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="{% url 'core:checkout' %}" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										Check Out
 									</a>
 								</div>
@@ -196,7 +196,7 @@
 						</span>
 					</li>
 
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+					{% comment %} <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 						<div class="topbar-child2-mobile">
 							
 
@@ -206,9 +206,9 @@
 								</select>
 							</div>
 						</div>
-					</li>
+					</li> {% endcomment %}
 
-					<li class="item-topbar-mobile p-l-10">
+					{% comment %} <li class="item-topbar-mobile p-l-10">
 						<div class="topbar-social-mobile" style="text-decoration: none;">
 							<span class="icon1"><a href="#" style="font-size: 20px;" class="topbar-social-item fa fa-facebook"></a></span>
 							<span class="icon2"><a href="#" style="font-size: 20px;" class="topbar-social-item fa fa-instagram"></a></span>
@@ -216,14 +216,14 @@
 							<span class="icon4"><a href="#" style="font-size: 20px;" class="topbar-social-item fa fa-twitter"></a></span>
 							<span class="icon5"><a href="#" style="font-size: 20px;" class="topbar-social-item fa fa-youtube-play"></a></span>
 						</div>
-					</li>
+					</li> {% endcomment %}
 
 					<li class="item-menu-mobile" style="text-decoration: none;">
 						<a href="/">Home</a>
 					</li>
 
 					<li class="item-menu-mobile"  style="text-decoration: none;">
-						<a href="/shop">Shop</a>
+						<a href="/category">Shop</a>
 					</li>
 
 					{% categories_mobile %}
